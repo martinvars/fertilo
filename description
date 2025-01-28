@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fertilo - Soluciones Naturales de Fertilidad</title>
+  <!-- Tailwind CSS -->
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+    rel="stylesheet"
+  />
+  <style>
+    .wave-top {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+    }
+
+    .wave-top svg {
+      position: relative;
+      display: block;
+      width: calc(100% + 1.3px);
+      height: 150px;
+    }
+
+    .organic-card {
+      border-radius: 30px;
+      transition: all 0.3s ease;
+    }
+
+    .organic-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .blob-bg {
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23F9A8D4' d='M44.7,-76.4C58.8,-69.7,71.8,-59.1,79.6,-45.1C87.4,-31.1,90,-13.7,87.1,2.2C84.2,18.1,75.7,32.4,65.7,44.7C55.7,57,44.2,67.3,30.5,74.4C16.8,81.5,0.9,85.4,-14.9,83.3C-30.7,81.2,-46.4,73,-58.7,61.1C-71,49.2,-79.9,33.5,-83.2,16.5C-86.5,-0.5,-84.2,-18.8,-77.1,-34.4C-70,-50,-58.2,-62.9,-44.1,-69.6C-30,-76.3,-15,-76.8,0.6,-77.8C16.2,-78.8,32.4,-80.3,44.7,-76.4Z' transform='translate(100 100)' /%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+
+    /* Nuevo estilo para la sección de galería */
+    .gallery img {
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-green-50 to-pink-50">
+  <!-- Navegación -->
+  <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md">
+    <div class="container mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <div class="text-3xl font-bold text-teal-600">Fertilo</div>
+        <div class="hidden md:flex space-x-8">
+          <a href="#beneficios" class="text-teal-600 hover:text-teal-800">Beneficios</a>
+          <a href="#tecnologia" class="text-teal-600 hover:text-teal-800">Tecnología</a>
+          <a href="#galeria" class="text-teal-600 hover:text-teal-800">Galería</a>
+          <a href="#contacto" class="bg-teal-600 text-white px-6 py-2 rounded-full hover:bg-teal-700">Contáctanos</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sección Principal -->
+  <section class="pt-32 pb-20 relative overflow-hidden">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 z-10">
+          <h1 class="text-5xl md:text-6xl font-bold text-teal-800 mb-6 leading-tight">
+            El Camino Natural hacia la Maternidad
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            Descubre una revolución en tratamientos de fertilidad que trabaja
+            en armonía con los procesos naturales de tu cuerpo.
+          </p>
+          <div class="flex space-x-4">
+            <button class="bg-teal-600 text-white px-8 py-4 rounded-full hover:bg-teal-700 transition duration-300">
+              Comienza Tu Viaje
+            </button>
+            <button class="border-2 border-teal-600 text-teal-600 px-8 py-4 rounded-full hover:bg-teal-50 transition duration-300">
+              Saber Más
+            </button>
+          </div>
+        </div>
+        <div class="md:w-1/2 mt-12 md:mt-0 blob-bg p-20">
+          <!-- Imagen principal, reemplaza la URL con una imagen real si deseas -->
+          <img
+            src="https://images.unsplash.com/photo-1608033498977-5cef505c8c0f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxOTkxODN8MHwxfHNlYXJjaHwyfHxwcmVnbmFuY3klMjB3b21hbnxlbnwwfHx8fDE2NTA2OTIzMzQ&ixlib=rb-1.2.1&q=80&w=600"
+            alt="Innovación en Fertilidad"
+            class="rounded-full shadow-2xl object-cover w-full h-full"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Beneficios -->
+  <section id="beneficios" class="py-20 relative bg-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center text-teal-800 mb-16">
+        La Ventaja Natural
+      </h2>
+      <div class="grid md:grid-cols-3 gap-12">
+        <div class="organic-card bg-white p-8 shadow-lg">
+          <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mb-6">
+            <span class="text-3xl">🌱</span>
+          </div>
+          <h3 class="text-2xl font-semibold text-teal-800 mb-4">
+            Naturalmente Mejorado
+          </h3>
+          <p class="text-gray-600">
+            Nuestra tecnología trabaja con los procesos naturales de tu cuerpo,
+            creando un ambiente óptimo para la maduración de óvulos. Este
+            enfoque reduce el estrés físico y emocional, permitiéndote
+            concentrarte en lo que realmente importa.
+          </p>
+        </div>
+        <div class="organic-card bg-white p-8 shadow-lg">
+          <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mb-6">
+            <span class="text-3xl">💗</span>
+          </div>
+          <h3 class="text-2xl font-semibold text-teal-800 mb-4">
+            Proceso Suave
+          </h3>
+          <p class="text-gray-600">
+            Despídete de las inyecciones hormonales y vive una experiencia
+            más cómoda en tu camino hacia la maternidad. Nuestro tratamiento
+            minimiza los efectos secundarios y promueve una relación más
+            armoniosa entre tu cuerpo y el proceso de fertilización.
+          </p>
+        </div>
+        <div class="organic-card bg-white p-8 shadow-lg">
+          <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-6">
+            <span class="text-3xl">⭐</span>
+          </div>
+          <h3 class="text-2xl font-semibold text-teal-800 mb-4">
+            Mejores Resultados
+          </h3>
+          <p class="text-gray-600">
+            Nuestro innovador sistema de co-cultivo mejora potencialmente la
+            calidad de los óvulos y aumenta las tasas de éxito. Cada paso está
+            diseñado para ofrecerte una oportunidad real y tangible de
+            alcanzar tu sueño de ser madre.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Tecnología -->
+  <section id="tecnologia" class="py-20 bg-teal-50 relative">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-center gap-12">
+        <div class="md:w-1/2">
+          <h2 class="text-4xl font-bold text-teal-800 mb-8">
+            Tecnología Revolucionaria
+          </h2>
+          <p class="text-gray-700 mb-6">
+            La plataforma de Fertilo combina ciencia de vanguardia con la
+            inspiración de los procesos biológicos naturales. Nuestra misión
+            es potenciar la vida, facilitando la concepción de manera más
+            amigable y respetuosa con tu cuerpo.
+          </p>
+          <div class="space-y-6">
+            <div class="flex items-start space-x-4">
+              <div
+                class="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center flex-shrink-0"
+              >
+                <span class="text-2xl">🔬</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-teal-800 mb-2">
+                  Sistema Avanzado de Co-Cultivo
+                </h3>
+                <p class="text-gray-600">
+                  Nuestras Células de Soporte Ovárico creadas mediante
+                  ingeniería generan el ambiente perfecto para la maduración
+                  de óvulos, optimizando cada fase de su desarrollo.
+                </p>
+              </div>
+            </div>
+            <div class="flex items-start space-x-4">
+              <div
+                class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center flex-shrink-0"
+              >
+                <span class="text-2xl">🧬</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-teal-800 mb-2">
+                  Comunicación Natural
+                </h3>
+                <p class="text-gray-600">
+                  La retroalimentación dinámica asegura un desarrollo óptimo
+                  a través de señalización hormonal natural. Este proceso
+                  imita las condiciones ideales del cuerpo para apoyar la
+                  implantación y el crecimiento embrionario.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="md:w-1/2">
+          <div class="relative">
+            <div
+              class="absolute inset-0 bg-teal-200 rounded-full opacity-20 blur-3xl"
+            ></div>
+            <img
+              src="https://images.unsplash.com/photo-1619356941744-e8d5bb13becd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxOTkxODN8MHwxfHNlYXJjaHwxfHxpbmN1YmF0b3J8ZW58MHx8fHwxNjUwNjkxMzQ2&ixlib=rb-1.2.1&q=80&w=800"
+              alt="Tecnología Fertilo"
+              class="relative rounded-3xl shadow-xl w-full h-auto object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Historias Reales (Testimonios Ampliados) -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="max-w-3xl mx-auto text-center mb-12">
+        <h2 class="text-4xl font-bold text-teal-800 mb-4">
+          Historias que Inspiran
+        </h2>
+        <p class="text-lg text-gray-600">
+          Muchas familias han encontrado en Fertilo la esperanza y el apoyo
+          que necesitaban. Conoce algunos relatos de quienes han dado el paso
+          hacia una maternidad más natural.
+        </p>
+      </div>
+
+      <!-- Testimonio 1 -->
+      <div
+        class="organic-card bg-teal-50 p-8 md:p-12 mb-8 max-w-3xl mx-auto shadow-lg"
+      >
+        <p class="text-xl text-gray-600 italic mb-6">
+          "El enfoque innovador de Fertilo hizo que mi camino hacia la
+          maternidad fuera mucho más cómodo. El proceso natural me dio
+          confianza, y los resultados fueron increíbles."
+        </p>
+        <div class="flex items-center justify-center">
+          <img
+            src="https://images.unsplash.com/photo-1605902711622-cfb43c4436aa?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=60&ixid=MnwyODQ1NzV8MHwxfHNlYXJjaHwyfHx3b21hbiUyMHByb2ZpbGUlMjBwb3J0cmFpdHxlbnwwfHx8fDE2NTE1NzM0NDg&ixlib=rb-1.2.1&q=80&w=60"
+            alt="Perfil de paciente"
+            class="w-12 h-12 bg-teal-200 rounded-full object-cover"
+          />
+          <div class="ml-4 text-left">
+            <div class="font-semibold text-teal-800">María García</div>
+            <div class="text-gray-600 text-sm">Paciente de Fertilo</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonio 2 -->
+      <div
+        class="organic-card bg-teal-50 p-8 md:p-12 mb-8 max-w-3xl mx-auto shadow-lg"
+      >
+        <p class="text-xl text-gray-600 italic mb-6">
+          "Gracias a Fertilo y su equipo, pude liberarme del estrés de las
+          inyecciones constantes. Sentí que mi cuerpo y mi bebé crecían en
+          perfecta sintonía."
+        </p>
+        <div class="flex items-center justify-center">
+          <img
+            src="https://images.unsplash.com/photo-1603415526960-cf8ac3b8c914?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=60&ixid=MnwxOTkxODN8MHwxfHNlYXJjaHw2fHx3b21hbiUyMHByb2ZpbGUlMjBwb3J0cmFpdHxlbnwwfHx8fDE2NTE1NzI0OTM&ixlib=rb-1.2.1&q=80&w=60"
+            alt="Perfil de paciente"
+            class="w-12 h-12 bg-teal-200 rounded-full object-cover"
+          />
+          <div class="ml-4 text-left">
+            <div class="font-semibold text-teal-800">Ana González</div>
+            <div class="text-gray-600 text-sm">Paciente de Fertilo</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Galería (Más imágenes) -->
+  <section id="galeria" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-teal-800 mb-4">Galería</h2>
+        <p class="text-lg text-gray-600">
+          Explora algunos momentos y representaciones de nuestro trabajo,
+          instalaciones y la belleza de la vida que nutrimos.
+        </p>
+      </div>
+      <div class="gallery grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Reemplaza las URLs de las imágenes con las que desees -->
+        <img
+          src="https://images.unsplash.com/photo-1513816762065-00bb277f8b57?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxOTkxODN8MHwxfHNlYXJjaHwyfHxraWQlMjBhbmQlMjBtb3RoZXJ8ZW58MHx8fHwxNjUwNzAzOTI3&ixlib=rb-1.2.1&q=80&w=400"
+          alt="Madre e hijo"
+          class="w-full rounded-lg shadow-lg object-cover"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1526634332515-dbd963bd566b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxOTkxODN8MHwxfHNlYXJjaHwzfHxmZXJ0aWxpdHl8ZW58MHx8fHwxNjUwNzAzOTUx&ixlib=rb-1.2.1&q=80&w=400"
+          alt="Instalaciones de laboratorio"
+          class="w-full rounded-lg shadow-lg object-cover"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1580281658626-779855a6d070?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxOTkxODN8MHwxfHNlYXJjaHw0fHx3b21hbiUyMGRva3RvcnxlbnwwfHx8fDE2NTA3MDQ0MjY&ixlib=rb-1.2.1&q=80&w=400"
+          alt="Equipo de profesionales"
+          class="w-full rounded-lg shadow-lg object-cover"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1559949107-c529b337498b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxOTkxODN8MHwxfHNlYXJjaHwxNXx8YmFieXxlbnwwfHx8fDE2NTA3MDQ0Njc&ixlib=rb-1.2.1&q=80&w=400"
+          alt="Bebé durmiendo"
+          class="w-full rounded-lg shadow-lg object-cover"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1600655320290-cc6a8e4cc1b9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxOTkxODN8MHwxfHNlYXJjaHwxOHx8bGFifGVufDB8fHx8MTY1MDcwNDQ5Nw&ixlib=rb-1.2.1&q=80&w=400"
+          alt="Equipo de laboratorio"
+          class="w-full rounded-lg shadow-lg object-cover"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1554524112-c17a66c79e0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxOTkxODN8MHwxfHNlYXJjaHwxMnx8ZmVydGlsaXR5fGVufDB8fHx8MTY1MDcwNDUyOA&ixlib=rb-1.2.1&q=80&w=400"
+          alt="Embriología"
+          class="w-full rounded-lg shadow-lg object-cover"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Contacto -->
+  <section id="contacto" class="py-20 bg-teal-800 text-white relative">
+    <div class="container mx-auto px-6">
+      <div class="max-w-2xl mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-8">Comienza Tu Historia</h2>
+        <p class="text-xl mb-12">
+          Da el primer paso hacia tus sueños de maternidad con la tecnología
+          revolucionaria de Fertilo.
+        </p>
+        <form class="space-y-6">
+          <input
+            type="email"
+            placeholder="Ingresa tu correo electrónico"
+            class="w-full px-6 py-4 rounded-full bg-white/10 border border-white/20 focus:outline-none focus:ring-2 focus:ring-teal-400 text-white placeholder-gray-200"
+          />
+          <button
+            class="bg-white text-teal-800 px-12 py-4 rounded-full font-semibold hover:bg-teal-100 transition duration-300"
+          >
+            Empezar Ahora
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pie de Página -->
+  <footer class="bg-teal-900 text-white py-12">
+    <div class="container mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-2xl font-bold mb-4">Fertilo</h3>
+          <p class="text-teal-200">
+            Revolucionando el tratamiento de fertilidad a través de la
+            innovación inspirada en la naturaleza.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Empresa</h4>
+          <ul class="space-y-2 text-teal-200">
+            <li>
+              <a href="#" class="hover:text-white">Sobre Nosotros</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-white">Carreras</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-white">Contacto</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Recursos</h4>
+          <ul class="space-y-2 text-teal-200">
+            <li>
+              <a href="#" class="hover:text-white">Blog</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-white">Investigación</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-white">Preguntas Frecuentes</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Síguenos</h4>
+          <div class="flex space-x-4">
+            <!-- Facebook -->
+            <a href="#" class="text-teal-200 hover:text-white">
+              <svg
+                class="w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  d="M22.676 0H1.326C.595 0 0 .597 0 1.33v21.339C0 23.404.594 24 1.326 24h11.495v-9.294H9.847v-3.62h2.974V8.413c0-2.946 1.796-4.557 4.416-4.557 1.255 0 2.331.09 2.645.135v3.068h-1.817c-1.423 0-1.7.677-1.7 1.67v2.188h3.396l-.443 3.62h-2.953V24h5.785C23.405 24 24 23.404 24 22.67V1.33C24 .597 23.406 0 22.676 0"
+                />
+              </svg>
+            </a>
+            <!-- Twitter -->
+            <a href="#" class="text-teal-200 hover:text-white">
+              <svg
+                class="w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  d="M24 4.557a9.83 9.83 0 01-2.828.775 4.933 4.933 0 002.165-2.723 9.869 9.869 0 01-3.127 1.195 4.92 4.92 0 00-8.381 4.482A13.978 13.978 0 011.671 3.149a4.93 4.93 0 001.523 6.574A4.904 4.904 0 01.965 9.16v.06a4.92 4.92 0 003.95 4.827 4.946 4.946 0 01-2.21.084 4.927 4.927 0 004.6 3.417A9.868 9.868 0 010 21.539 13.936 13.936 0 007.548 24c9.057 0 14.01-7.496 14.01-13.988 0-.213-.005-.425-.014-.636A9.935 9.935 0 0024 4.557z"
+                />
+              </svg>
+            </a>
+            <!-- Instagram -->
+            <a href="#" class="text-teal-200 hover:text-white">
+              <svg
+                class="w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 0C8.74 0 8.333.014 7.052.072 5.772.13 4.881.337 4.18.65a4.61 4.61 0 00-1.67 1.09A4.61 4.61 0 001.42 3.41C1.108 4.111.9 5 .84 6.28.782 7.56.768 7.968.768 11.232c0 3.267.014 3.675.072 4.955.058 1.28.266 2.17.58 2.87.313.7.73 1.283 1.09 1.67.362.388.935.777 1.67 1.09.7.314 1.59.522 2.87.58 1.28.058 1.687.072 4.955.072 3.267 0 3.675-.014 4.955-.072 1.28-.058 2.17-.266 2.87-.58a4.61 4.61 0 001.67-1.09 4.61 4.61 0 001.09-1.67c.314-.7.522-1.59.58-2.87.058-1.28.072-1.687.072-4.955 0-3.267-.014-3.675-.072-4.955-.058-1.28-.266-2.17-.58-2.87a4.61 4.61 0 00-1.09-1.67 4.61 4.61 0 00-1.67-1.09c-.7-.314-1.59-.522-2.87-.58C15.675.014 15.267 0 12 0zm0 2.16c3.22 0 3.6.012 4.873.07 1.176.054 1.815.24 2.235.398.562.217.962.476 1.385.9.424.423.683.823.9 1.385.158.42.344 1.06.398 2.235.058 1.273.07 1.653.07 4.873s-.012 3.6-.07 4.873c-.054 1.176-.24 1.815-.398 2.235a3.452 3.452 0 01-.9 1.385c-.423.424-.823.683-1.385.9-.42.158-1.06.344-2.235.398-1.273.058-1.653.07-4.873.07s-3.6-.012-4.873-.07c-1.176-.054-1.815-.24-2.235-.398a3.452 3.452 0 01-1.385-.9 3.452 3.452 0 01-.9-1.385c-.158-.42-.344-1.06-.398-2.235-.058-1.273-.07-1.653-.07-4.873s.012-3.6.07-4.873c.054-1.176.24-1.815.398-2.235.217-.562.476-.962.9-1.385.424-.423.823-.683 1.385-.9.42-.158 1.06-.344 2.235-.398C8.4 2.172 8.78 2.16 12 2.16zm0 3.24A6.6 6.6 0 105 12 6.6 6.6 0 0012 5.4zm0 10.92A4.32 4.32 0 117 12 4.32 4.32 0 0112 16.32zm5.52-10.08a1.44 1.44 0 11-1.44-1.44 1.44 1.44 0 011.44 1.44z"
+                />
+              </svg>
+            </a>
+            <!-- Más iconos de redes sociales si lo deseas -->
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-8 text-teal-400 text-sm">
+        © 2025 Fertilo. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
