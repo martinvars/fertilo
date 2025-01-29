@@ -2,18 +2,15 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>
-    <span class="lang-es">Fertilo - Revolucionando la Fertilidad</span>
-    <span class="lang-en">Fertilo - Revolutionizing Fertility</span>
-  </title>
+  <title>Fertilo - Revolucionando la Fertilidad</title>
   <meta name="description" content="Fertilo ofrece tratamientos de fertilidad innovadores que revolucionan la FIV y la congelación de óvulos, trabajando en armonía con tu cuerpo para cumplir tu sueño de ser madre.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Tailwind CSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <!-- FontAwesome Icons -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <!-- Country Flag Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.6/css/flag-icon.min.css">
   <style>
     .organic-card {
       border-radius: 30px;
@@ -68,8 +65,12 @@
           <span class="lang-en">Contact Us</span>
         </a>
         <!-- Language Switcher -->
-        <button id="es-button" class="language-button text-indigo-600 hover:text-indigo-800">ES</button>
-        <button id="en-button" class="language-button text-indigo-600 hover:text-indigo-800">EN</button>
+        <button id="es-button" class="language-button text-indigo-600 hover:text-indigo-800 flex items-center">
+          <span class="flag-icon flag-icon-es mr-2"></span> ES
+        </button>
+        <button id="en-button" class="language-button text-indigo-600 hover:text-indigo-800 flex items-center">
+          <span class="flag-icon flag-icon-gb mr-2"></span> EN
+        </button>
       </div>
       <div class="md:hidden flex items-center">
         <button class="mobile-menu-button text-indigo-600 focus:outline-none">
@@ -100,8 +101,12 @@
       </a>
       <!-- Language Switcher -->
       <div class="flex items-center justify-center space-x-4 py-4">
-        <button id="es-button-mobile" class="language-button text-indigo-600 hover:text-indigo-800">ES</button>
-        <button id="en-button-mobile" class="language-button text-indigo-600 hover:text-indigo-800">EN</button>
+        <button id="es-button-mobile" class="language-button text-indigo-600 hover:text-indigo-800 flex items-center">
+          <span class="flag-icon flag-icon-es mr-2"></span> ES
+        </button>
+        <button id="en-button-mobile" class="language-button text-indigo-600 hover:text-indigo-800 flex items-center">
+          <span class="flag-icon flag-icon-gb mr-2"></span> EN
+        </button>
       </div>
     </div>
   </nav>
@@ -131,7 +136,7 @@
           </div>
         </div>
         <div class="md:w-1/2 mt-12 md:mt-0 flex justify-center">
-          <i data-lucide="heart-pulse" class="w-64 h-64 text-indigo-600"></i>
+          <i class="fas fa-baby w-64 h-64 text-indigo-600"></i>
         </div>
       </div>
     </div>
@@ -148,7 +153,7 @@
         <!-- Más Natural -->
         <div class="organic-card bg-white p-8 shadow-lg">
           <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
-            <i data-lucide="leaf" class="w-8 h-8 text-green-600"></i>
+            <i class="fas fa-leaf w-8 h-8 text-green-600"></i>
           </div>
           <h3 class="text-2xl font-semibold text-indigo-800 mb-4">
             <span class="lang-es">Más Natural</span>
@@ -162,7 +167,7 @@
         <!-- Más Seguro -->
         <div class="organic-card bg-white p-8 shadow-lg">
           <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
-            <i data-lucide="shield-check" class="w-8 h-8 text-blue-600"></i>
+            <i class="fas fa-shield-alt w-8 h-8 text-blue-600"></i>
           </div>
           <h3 class="text-2xl font-semibold text-indigo-800 mb-4">
             <span class="lang-es">Más Seguro</span>
@@ -176,7 +181,7 @@
         <!-- Más Rápido -->
         <div class="organic-card bg-white p-8 shadow-lg">
           <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-6">
-            <i data-lucide="zap" class="w-8 h-8 text-yellow-600"></i>
+            <i class="fas fa-bolt w-8 h-8 text-yellow-600"></i>
           </div>
           <h3 class="text-2xl font-semibold text-indigo-800 mb-4">
             <span class="lang-es">Más Rápido</span>
@@ -190,7 +195,7 @@
         <!-- Más Cómodo -->
         <div class="organic-card bg-white p-8 shadow-lg">
           <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mb-6">
-            <i data-lucide="smile" class="w-8 h-8 text-pink-600"></i>
+            <i class="fas fa-spa w-8 h-8 text-pink-600"></i>
           </div>
           <h3 class="text-2xl font-semibold text-indigo-800 mb-4">
             <span class="lang-es">Más Cómodo</span>
@@ -204,7 +209,7 @@
         <!-- Más Eficaz -->
         <div class="organic-card bg-white p-8 shadow-lg">
           <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
-            <i data-lucide="trending-up" class="w-8 h-8 text-purple-600"></i>
+            <i class="fas fa-chart-line w-8 h-8 text-purple-600"></i>
           </div>
           <h3 class="text-2xl font-semibold text-indigo-800 mb-4">
             <span class="lang-es">Más Eficaz</span>
@@ -218,7 +223,7 @@
         <!-- Más Accesible -->
         <div class="organic-card bg-white p-8 shadow-lg">
           <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
-            <i data-lucide="globe" class="w-8 h-8 text-indigo-600"></i>
+            <i class="fas fa-globe w-8 h-8 text-indigo-600"></i>
           </div>
           <h3 class="text-2xl font-semibold text-indigo-800 mb-4">
             <span class="lang-es">Más Accesible</span>
@@ -242,7 +247,7 @@
       </h2>
       <div class="flex flex-col md:flex-row items-center gap-12">
         <div class="md:w-1/2 flex justify-center">
-          <i data-lucide="cpu" class="w-64 h-64 text-indigo-600"></i>
+          <i class="fas fa-vial w-64 h-64 text-indigo-600"></i>
         </div>
         <div class="md:w-1/2">
           <p class="text-xl text-gray-600 mb-6">
@@ -252,8 +257,8 @@
           <div class="space-y-6">
             <!-- Células de Soporte Ovárico -->
             <div class="flex items-start space-x-4">
-              <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-                <i data-lucide="layers" class="w-6 h-6 text-green-600"></i>
+              <div class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-dna w-6 h-6 text-pink-600"></i>
               </div>
               <div>
                 <h3 class="text-xl font-semibold text-indigo-800 mb-2">
@@ -268,8 +273,8 @@
             </div>
             <!-- Sistema de Cocultivo -->
             <div class="flex items-start space-x-4">
-              <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-                <i data-lucide="share-2" class="w-6 h-6 text-blue-600"></i>
+              <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-hand-holding-heart w-6 h-6 text-green-600"></i>
               </div>
               <div>
                 <h3 class="text-xl font-semibold text-indigo-800 mb-2">
@@ -284,8 +289,8 @@
             </div>
             <!-- Señalización Hormonal Natural -->
             <div class="flex items-start space-x-4">
-              <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
-                <i data-lucide="activity" class="w-6 h-6 text-purple-600"></i>
+              <div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-bell w-6 h-6 text-yellow-600"></i>
               </div>
               <div>
                 <h3 class="text-xl font-semibold text-indigo-800 mb-2">
@@ -300,8 +305,8 @@
             </div>
             <!-- Maduración Acelerada -->
             <div class="flex items-start space-x-4">
-              <div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
-                <i data-lucide="clock" class="w-6 h-6 text-yellow-600"></i>
+              <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-tachometer-alt w-6 h-6 text-blue-600"></i>
               </div>
               <div>
                 <h3 class="text-xl font-semibold text-indigo-800 mb-2">
@@ -331,7 +336,7 @@
         <!-- Extracción de Óvulos -->
         <div class="organic-card bg-white p-8 shadow-lg text-center">
           <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mb-6 mx-auto">
-            <i data-lucide="download-cloud" class="w-8 h-8 text-pink-600"></i>
+            <i class="fas fa-egg w-8 h-8 text-pink-600"></i>
           </div>
           <h3 class="text-2xl font-semibold text-indigo-800 mb-4">
             <span class="lang-es">Extracción de Óvulos</span>
@@ -345,7 +350,7 @@
         <!-- Cocultivo -->
         <div class="organic-card bg-white p-8 shadow-lg text-center">
           <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6 mx-auto">
-            <i data-lucide="repeat" class="w-8 h-8 text-indigo-600"></i>
+            <i class="fas fa-seedling w-8 h-8 text-indigo-600"></i>
           </div>
           <h3 class="text-2xl font-semibold text-indigo-800 mb-4">
             <span class="lang-es">Cocultivo</span>
@@ -359,7 +364,7 @@
         <!-- Maduración -->
         <div class="organic-card bg-white p-8 shadow-lg text-center">
           <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6 mx-auto">
-            <i data-lucide="sunrise" class="w-8 h-8 text-green-600"></i>
+            <i class="fas fa-hourglass-half w-8 h-8 text-green-600"></i>
           </div>
           <h3 class="text-2xl font-semibold text-indigo-800 mb-4">
             <span class="lang-es">Maduración</span>
@@ -373,7 +378,7 @@
         <!-- Fertilización o Congelación -->
         <div class="organic-card bg-white p-8 shadow-lg text-center">
           <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
-            <i data-lucide="gift" class="w-8 h-8 text-blue-600"></i>
+            <i class="fas fa-gift w-8 h-8 text-blue-600"></i>
           </div>
           <h3 class="text-2xl font-semibold text-indigo-800 mb-4">
             <span class="lang-es">Fertilización/Congelación</span>
@@ -405,7 +410,7 @@
             <!-- Transformando la Fertilidad -->
             <div class="flex items-start space-x-4">
               <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center flex-shrink-0">
-                <i data-lucide="refresh-cw" class="w-6 h-6 text-indigo-600"></i>
+                <i class="fas fa-sync-alt w-6 h-6 text-indigo-600"></i>
               </div>
               <div>
                 <h3 class="text-xl font-semibold text-indigo-800 mb-2">
@@ -421,7 +426,7 @@
             <!-- Accesibilidad -->
             <div class="flex items-start space-x-4">
               <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-                <i data-lucide="unlock" class="w-6 h-6 text-green-600"></i>
+                <i class="fas fa-universal-access w-6 h-6 text-green-600"></i>
               </div>
               <div>
                 <h3 class="text-xl font-semibold text-indigo-800 mb-2">
@@ -437,7 +442,7 @@
             <!-- Enfoque en el Paciente -->
             <div class="flex items-start space-x-4">
               <div class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center flex-shrink-0">
-                <i data-lucide="user-check" class="w-6 h-6 text-pink-600"></i>
+                <i class="fas fa-heart w-6 h-6 text-pink-600"></i>
               </div>
               <div>
                 <h3 class="text-xl font-semibold text-indigo-800 mb-2">
@@ -446,14 +451,14 @@
                 </h3>
                 <p class="text-gray-600">
                   <span class="lang-es">Priorizamos la seguridad y comodidad de las pacientes, ofreciendo un tratamiento menos invasivo y más amigable.</span>
-                  <span class="lang-en">We prioritize patient safety and comfort, offering a less invasive and more friendly treatment.</span>
+                  <span class="lang-en">We prioritize patient safety and comfort, offering a less invasive and friendlier treatment.</span>
                 </p>
               </div>
             </div>
           </div>
         </div>
         <div class="md:w-1/2 flex justify-center">
-          <i data-lucide="target" class="w-64 h-64 text-indigo-600"></i>
+          <i class="fas fa-bullseye w-64 h-64 text-indigo-600"></i>
         </div>
       </div>
     </div>
@@ -471,7 +476,7 @@
           <span class="lang-es">Gameto es una empresa liderada por mujeres, impulsada por la misión de redefinir la salud de la mujer. Reconocemos los desafíos en los viajes reproductivos y estamos comprometidos a desarrollar soluciones innovadoras como Fertilo para mejorar la experiencia de las pacientes.</span>
           <span class="lang-en">Gameto is a women-led company driven by the mission to redefine women's health. We recognize the challenges in reproductive journeys and are committed to developing innovative solutions like Fertilo to improve patient experiences.</span>
         </p>
-        <i data-lucide="users" class="w-32 h-32 text-indigo-600 mx-auto mb-6"></i>
+        <i class="fas fa-users w-32 h-32 text-indigo-600 mx-auto mb-6"></i>
       </div>
     </div>
   </section>
@@ -487,11 +492,11 @@
         <div class="organic-card bg-indigo-700 p-8 md:p-12">
           <p class="text-xl italic mb-6">
             <span class="lang-es">"Fertilo cambió nuestra vida. El proceso fue rápido y sin complicaciones, y ahora esperamos nuestro primer hijo. No podríamos estar más agradecidos."</span>
-            <span class="lang-en">"Fertilo changed our life. The process was quick and hassle-free, and now we're expecting our first child. We couldn't be more grateful."</span>
+            <span class="lang-en">"Fertilo changed our lives. The process was quick and hassle-free, and now we're expecting our first child. We couldn't be more grateful."</span>
           </p>
           <div class="flex items-center justify-center mt-6">
             <div class="w-12 h-12 bg-indigo-600 rounded-full flex items-center justify-center">
-              <i data-lucide="user" class="w-6 h-6 text-white"></i>
+              <i class="fas fa-user w-6 h-6 text-white"></i>
             </div>
             <div class="ml-4 text-left">
               <div class="font-semibold">
@@ -523,9 +528,9 @@
         </p>
         <form class="space-y-6" action="#" method="POST">
           <input type="text" name="name" placeholder="Ingresa tu nombre" required class="w-full px-6 py-4 rounded-full bg-white/10 border border-white/20 placeholder-white focus:outline-none focus:ring-2 focus:ring-indigo-400 lang-es">
-          <input type="text" name="name" placeholder="Enter your name" required class="w-full px-6 py-4 rounded-full bg-white/10 border border-white/20 placeholder-white focus:outline-none focus:ring-2 focus:ring-indigo-400 lang-en">
+          <input type="text" name="name_en" placeholder="Enter your name" required class="w-full px-6 py-4 rounded-full bg-white/10 border border-white/20 placeholder-white focus:outline-none focus:ring-2 focus:ring-indigo-400 lang-en">
           <input type="email" name="email" placeholder="Ingresa tu correo electrónico" required class="w-full px-6 py-4 rounded-full bg-white/10 border border-white/20 placeholder-white focus:outline-none focus:ring-2 focus:ring-indigo-400 lang-es">
-          <input type="email" name="email" placeholder="Enter your email address" required class="w-full px-6 py-4 rounded-full bg-white/10 border border-white/20 placeholder-white focus:outline-none focus:ring-2 focus:ring-indigo-400 lang-en">
+          <input type="email" name="email_en" placeholder="Enter your email address" required class="w-full px-6 py-4 rounded-full bg-white/10 border border-white/20 placeholder-white focus:outline-none focus:ring-2 focus:ring-indigo-400 lang-en">
           <button type="submit" class="bg-white text-indigo-800 px-12 py-4 rounded-full font-semibold hover:bg-indigo-100 transition duration-300">
             <span class="lang-es">Solicitar Información</span>
             <span class="lang-en">Request Information</span>
@@ -655,10 +660,8 @@
     btn.addEventListener('click', () => {
       menu.classList.toggle('hidden');
     });
-
-    lucide.createIcons();
   </script>
 
 </body>
 </html>
-language switcher added
+new icons
