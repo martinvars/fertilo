@@ -21,17 +21,8 @@
       transform: translateY(-10px);
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
     }
-
-    .mobile-menu {
-      display: none;
-    }
-
-    @media (max-width: 768px) {
-      .mobile-menu {
-        display: block;
-      }
-    }
     /* Removed .lang-en { display: none; } so JS can control it properly */
+    /* Removed conflicting .mobile-menu custom CSS */
   </style>
 </head>
 <body class="bg-gradient-to-br from-purple-50 to-indigo-50">
@@ -75,7 +66,8 @@
         </button>
       </div>
     </div>
-    <div class="mobile-menu hidden md:hidden bg-white/90 backdrop-blur-md">
+    <!-- Mobile Menu (Hidden by default) -->
+    <div class="mobile-menu hidden bg-white/90 backdrop-blur-md">
       <a href="#beneficios" class="block px-6 py-4 text-indigo-600 hover:bg-indigo-50">
         <span class="lang-es">Beneficios</span>
         <span class="lang-en">Benefits</span>
@@ -96,7 +88,7 @@
         <span class="lang-es">Contáctanos</span>
         <span class="lang-en">Contact Us</span>
       </a>
-      <!-- Language Switcher -->
+      <!-- Language Switcher in Mobile Menu -->
       <div class="flex items-center justify-center space-x-4 py-4">
         <button id="es-button-mobile" class="language-button text-indigo-600 hover:text-indigo-800 flex items-center">
           <span class="flag-icon flag-icon-es mr-2"></span> ES
@@ -296,7 +288,7 @@
                 </h3>
                 <p class="text-gray-600">
                   <span class="lang-es">Las OSC producen y responden a hormonas clave, permitiendo una maduración de los óvulos sin necesidad de intervenciones hormonales externas.</span>
-                  <span class="lang-en">OSC produce and respond to key hormones, allowing egg maturation without the need for external hormonal interventions.</span>
+                  <span class="lang-en">OSC produces and responds to key hormones, allowing egg maturation without the need for external hormonal interventions.</span>
                 </p>
               </div>
             </div>
@@ -524,10 +516,20 @@
           <span class="lang-en">Take the first step towards motherhood with Fertilo. We are here to accompany you on this beautiful journey.</span>
         </p>
         <form class="space-y-6" action="#" method="POST">
-          <input type="text" name="name" placeholder="Ingresa tu nombre" required class="w-full px-6 py-4 rounded-full bg-white/10 border border-white/20 placeholder-white focus:outline-none focus:ring-2 focus:ring-indigo-400 lang-es">
-          <input type="text" name="name_en" placeholder="Enter your name" required class="w-full px-6 py-4 rounded-full bg-white/10 border border-white/20 placeholder-white focus:outline-none focus:ring-2 focus:ring-indigo-400 lang-en">
-          <input type="email" name="email" placeholder="Ingresa tu correo electrónico" required class="w-full px-6 py-4 rounded-full bg-white/10 border border-white/20 placeholder-white focus:outline-none focus:ring-2 focus:ring-indigo-400 lang-es">
-          <input type="email" name="email_en" placeholder="Enter your email address" required class="w-full px-6 py-4 rounded-full bg-white/10 border border-white/20 placeholder-white focus:outline-none focus:ring-2 focus:ring-indigo-400 lang-en">
+          <input
+            type="text"
+            name="name"
+            placeholder="Ingresa tu nombre"
+            required
+            class="w-full px-6 py-4 rounded-full bg-white/10 border border-white/20 placeholder-white focus:outline-none focus:ring-2 focus:ring-indigo-400"
+          >
+          <input
+            type="email"
+            name="email"
+            placeholder="Ingresa tu correo electrónico"
+            required
+            class="w-full px-6 py-4 rounded-full bg-white/10 border border-white/20 placeholder-white focus:outline-none focus:ring-2 focus:ring-indigo-400"
+          >
           <button type="submit" class="bg-white text-indigo-800 px-12 py-4 rounded-full font-semibold hover:bg-indigo-100 transition duration-300">
             <span class="lang-es">Solicitar Información</span>
             <span class="lang-en">Request Information</span>
@@ -617,28 +619,39 @@
 
   <!-- Script para el cambio de idioma y menú móvil -->
   <script>
+    // Language Toggle Elements
     const langEnElements = document.querySelectorAll('.lang-en');
     const langEsElements = document.querySelectorAll('.lang-es');
+    // Language Switcher Buttons
     const esButton = document.getElementById('es-button');
     const enButton = document.getElementById('en-button');
     const esButtonMobile = document.getElementById('es-button-mobile');
     const enButtonMobile = document.getElementById('en-button-mobile');
 
+    // Set Language Function
     function setLanguage(language) {
       if (language === 'en') {
-        langEnElements.forEach(el => el.style.display = 'block');
+        langEnElements.forEach(el => el.style.display = 'inline');
         langEsElements.forEach(el => el.style.display = 'none');
+
+        // Update placeholders
+        document.querySelector('input[name="name"]').placeholder = 'Enter your name';
+        document.querySelector('input[name="email"]').placeholder = 'Enter your email address';
       } else {
         langEnElements.forEach(el => el.style.display = 'none');
-        langEsElements.forEach(el => el.style.display = 'block');
+        langEsElements.forEach(el => el.style.display = 'inline');
+
+        // Update placeholders
+        document.querySelector('input[name="name"]').placeholder = 'Ingresa tu nombre';
+        document.querySelector('input[name="email"]').placeholder = 'Ingresa tu correo electrónico';
       }
     }
 
-    // Buttons for desktop
+    // Event Listeners for Desktop Language Switcher
     esButton.addEventListener('click', () => setLanguage('es'));
     enButton.addEventListener('click', () => setLanguage('en'));
 
-    // Buttons for mobile
+    // Event Listeners for Mobile Language Switcher
     esButtonMobile.addEventListener('click', () => {
       setLanguage('es');
       menu.classList.toggle('hidden'); // Close mobile menu
@@ -649,10 +662,10 @@
       menu.classList.toggle('hidden'); // Close mobile menu
     });
 
-    // Initialize default language (Spanish). If you want English as default, change 'es' to 'en'.
+    // Initialize default language
     setLanguage('es');
 
-    // Mobile menu toggle
+    // Mobile Menu Toggle
     const btn = document.querySelector('.mobile-menu-button');
     const menu = document.querySelector('.mobile-menu');
 
@@ -663,4 +676,4 @@
 
 </body>
 </html>
-new changes 
+mobile fix
