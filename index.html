@@ -31,10 +31,7 @@
         display: block;
       }
     }
-
-    .lang-en {
-      display: none;
-    }
+    /* Removed .lang-en { display: none; } so JS can control it properly */
   </style>
 </head>
 <body class="bg-gradient-to-br from-purple-50 to-indigo-50">
@@ -629,17 +626,19 @@
 
     function setLanguage(language) {
       if (language === 'en') {
-        langEnElements.forEach(el => el.style.display = '');
+        langEnElements.forEach(el => el.style.display = 'block');
         langEsElements.forEach(el => el.style.display = 'none');
       } else {
         langEnElements.forEach(el => el.style.display = 'none');
-        langEsElements.forEach(el => el.style.display = '');
+        langEsElements.forEach(el => el.style.display = 'block');
       }
     }
 
+    // Buttons for desktop
     esButton.addEventListener('click', () => setLanguage('es'));
     enButton.addEventListener('click', () => setLanguage('en'));
 
+    // Buttons for mobile
     esButtonMobile.addEventListener('click', () => {
       setLanguage('es');
       menu.classList.toggle('hidden'); // Close mobile menu
@@ -650,10 +649,10 @@
       menu.classList.toggle('hidden'); // Close mobile menu
     });
 
-    // Initialize default language
+    // Initialize default language (Spanish). If you want English as default, change 'es' to 'en'.
     setLanguage('es');
 
-    // Script para Mobile Menu
+    // Mobile menu toggle
     const btn = document.querySelector('.mobile-menu-button');
     const menu = document.querySelector('.mobile-menu');
 
@@ -664,4 +663,4 @@
 
 </body>
 </html>
-new icons
+new changes 
